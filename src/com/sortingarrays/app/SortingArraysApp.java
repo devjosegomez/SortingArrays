@@ -12,40 +12,50 @@ import com.sortingarrays.model.Sort;
 public class SortingArraysApp {
 
 	public static void main(String[] args) {
-		//Bubble
-		int[] uBubble = {0, -1, 33, 20, 21, 20, 9, 100, -23, 10};
+		//u - unordered
+		//o - ordered
+		
+		// Bubble
+		int[] uBubble = { 0, -1, 33, 20, 21, 20, 9, 100, -23, 10 };
 		int[] oBubble;
-		
-		//Insertion
-		int[] uInsertion = {10, 6, 12, 46, -1, 12, 76, 34, -9, 3};
+
+		// Insertion
+		int[] uInsertion = { 10, 6, 12, 46, -1, 12, 76, 34, -9, 31 };
 		int[] oInsertion;
-		
+
+		// Selection
+		int[] uSelection = { 1, 65, 5, -10, -5, 45, 22, 44, -7, 85 };
+		int[] oSelection;
+
 		printArray(uBubble);
 		printArray(uInsertion);
-		
-		oBubble		= 	Sort.Bubble(uBubble);
-		oInsertion	=	Sort.InsertionSort(uInsertion);
-		
+		printArray(uSelection);
+
+		oBubble = Sort.Bubble(uBubble);
+		oInsertion = Sort.Insertion(uInsertion);
+		oSelection = Sort.Selection(uSelection);
+
 		printArray("Bubble", oBubble);
 		printArray("Insertion", oInsertion);
+		printArray("Selection", oSelection);
 	}
-	
-    //ToString
-	public static void printArray(String sortType, int[] orderedArray){
-		//Displaying Ordered Array with type
+
+	// ToString
+	public static void printArray(String sortType, int[] orderedArray) {
+		// Displaying Ordered Array with type
 		System.out.println("Ordered Array (" + sortType + " sort):");
-		for(int elem : orderedArray) {
+		for (int elem : orderedArray) {
 			System.out.print("[" + elem + "]");
 		}
-		System.out.print("\n");
+		System.out.print("\n\n");
 	}
-	
+
 	public static void printArray(int[] Array) {
-		//Displaying an Array
-		for(int elem : Array) {
+		// Displaying an Array
+		for (int elem : Array) {
 			System.out.print("[" + elem + "]");
 		}
-		System.out.print("\n");
+		System.out.print("\n\n");
 	}
 
 }
