@@ -12,13 +12,22 @@ import com.sortingarrays.model.Sort;
 public class SortingArraysApp {
 
 	public static void main(String[] args) {
-		int[] myUnsortedArray1 = {0, -1, 33, 20, 21, 20, 9, 100, -23, 10};
-		int[] myOrderedArray1;
+		//Bubble
+		int[] uBubble = {0, -1, 33, 20, 21, 20, 9, 100, -23, 10};
+		int[] oBubble;
 		
-		myOrderedArray1 = Sort.Bubble(myUnsortedArray1);
+		//Insertion
+		int[] uInsertion = {10, 6, 12, 46, -1, 12, 76, 34, -9, 3};
+		int[] oInsertion;
 		
-		printArray(myUnsortedArray1);
-		printArray("Bubble", myOrderedArray1);
+		printArray(uBubble);
+		printArray(uInsertion);
+		
+		oBubble		= 	Sort.Bubble(uBubble);
+		oInsertion	=	Sort.InsertionSort(uInsertion);
+		
+		printArray("Bubble", oBubble);
+		printArray("Insertion", oInsertion);
 	}
 	
     //ToString
