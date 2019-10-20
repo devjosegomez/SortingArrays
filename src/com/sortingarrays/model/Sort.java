@@ -6,7 +6,6 @@ public abstract class Sort {
 	public static int[] Bubble(int[] unsortedArray) {
 		int[] intArray = unsortedArray;
 
-		// Bubble sort
 		for (int lastUnsortedIndex = intArray.length - 1; lastUnsortedIndex > 0; lastUnsortedIndex--) {
 			for (int i = 0; i < lastUnsortedIndex; i++) {
 				if (intArray[i] > intArray[i + 1]) {
@@ -53,6 +52,28 @@ public abstract class Sort {
 
 		}
 
+		return intArray;
+	}
+
+	// Shell sort
+	public static int[] Shell(int[] unsortedArray) {
+		int[] intArray = unsortedArray;
+		for (int gap = intArray.length / 2; gap > 0; gap /= 2) {
+
+			for (int i = gap; i < intArray.length; i++) {
+				int newElement = intArray[i];
+
+				int j = i;
+
+				while (j >= gap && intArray[j - gap] > newElement) {
+					intArray[j] = intArray[j - gap];
+					j -= gap;
+				}
+
+				intArray[j] = newElement;
+
+			}
+		}
 		return intArray;
 	}
 

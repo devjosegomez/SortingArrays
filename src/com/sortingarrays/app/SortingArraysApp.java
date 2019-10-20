@@ -26,18 +26,25 @@ public class SortingArraysApp {
 		// Selection
 		int[] uSelection = { 1, 65, 5, -10, -5, 45, 22, 44, -7, 85 };
 		int[] oSelection;
-
+		
+		// Shell
+		int[] uShell = { 11, 5, 78, 15, 65, 2, 0, 444, 100, 4 };
+		int[] oShell;
+		
 		printArray(uBubble);
 		printArray(uInsertion);
 		printArray(uSelection);
+		printArray(uShell);
 
-		oBubble = Sort.Bubble(uBubble);
+		oBubble =	Sort.Bubble(uBubble);
 		oInsertion = Sort.Insertion(uInsertion);
 		oSelection = Sort.Selection(uSelection);
+		oShell = Sort.Shell(uShell);
 
 		printArray("Bubble", oBubble);
 		printArray("Insertion", oInsertion);
 		printArray("Selection", oSelection);
+		printArray("Shell", oShell);
 	}
 
 	// ToString
